@@ -23,7 +23,7 @@ export default function ProductPageTemplate({ data: { shopifyProduct } }) {
             onClick={() => {
               addProductToCart(variantId);
             }}
-            className={`btn btn-main mb-3`}
+            className={`btn btn-dark btn-lg mb-3`}
           >
             Add to cart
           </button>

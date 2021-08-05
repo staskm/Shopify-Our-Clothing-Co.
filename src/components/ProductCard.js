@@ -6,6 +6,7 @@ import { cardImage, wrapper } from "./ProductCard.module.scss";
 export const ProductCard = ({ product }) => {
   const image = getImage(product.images[0]);
   const price = product.priceRangeV2.maxVariantPrice.amount;
+
   return (
     <div className={`${wrapper} p-3 card mb-3 text-center `}>
       <Link

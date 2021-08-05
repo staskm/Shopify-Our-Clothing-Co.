@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+
+$custom-heading-font: Raleway;
+h1,
+h2,
+h3 {
+  font-family: $custom-heading-font;
+}
+
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * 0.875;
+$font-weight-bold: 700;
+$primary: #e8fae3;
+$danger: #dbb3b1;
+$body-color: #02111b;
+$link-color: $body-color;
+$link-hover-color: $primary;
+$nav-link-font-size: $font-size-lg;
+$nav-link-font-weight: $font-weight-bold;
+$heading-font-family: $custom-heading-font; ;

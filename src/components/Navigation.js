@@ -8,9 +8,9 @@ export const Navigation = () => {
     <nav
       className={`${wrapper} container-xl py-2 d-flex  justify-content-between`}
     >
-      <div className={`${left_item} d-flex`}>
-        <Link to="/" className={`${icon} d-flex align-items-center`}>
-          <RiHome7Fill />
+      <div className={`${left_item} nav-item d-flex`}>
+        <Link to="/" className={`nav-link d-flex align-items-center`}>
+          <RiHome7Fill className={`${icon} `} />
         </Link>
         <ul className={`nav `}>
           <li className="nav-item ">

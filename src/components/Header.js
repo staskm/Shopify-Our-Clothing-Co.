@@ -1,10 +1,10 @@
 import React from "react";
 
-import { headerImage, headerText } from "./Header.module.scss";
+import { wrapper, headerImage, headerText } from "./Header.module.scss";
 
 export const Header = () => {
   return (
-    <header className={`mb-5`}>
+    <header className={`${wrapper} mb-5`}>
       <div className={`${headerImage} `}>
         <div className={`${headerText} `}>
           <h1 className="display-1 text-center">
