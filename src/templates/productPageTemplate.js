@@ -14,7 +14,7 @@ export default function ProductPageTemplate({ data: { shopifyProduct } }) {
     <Layout>
       <div className={`${wrapper} text-center container-xl pb-3`}>
         <div>
-          <GatsbyImage image={image} alt="" />
+          <GatsbyImage image={image} alt={shopifyProduct.images[0].altText} />
         </div>
         <div className={`align-self-center`}>
           <h1>{shopifyProduct.title}</h1>
@@ -45,6 +45,7 @@ export const query = graphql`
       }
       images {
         src
+        altText
         gatsbyImageData(width: 500, breakpoints: 10)
       }
     }
