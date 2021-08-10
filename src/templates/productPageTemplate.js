@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Layout } from "../components/Layout";
+import { glowOnHover } from "../styles/glowOnHover.module.scss";
 import { wrapper } from "./productPageTemplate.module.scss";
 import { StoreContext } from "../context/store-context";
 
@@ -23,7 +24,7 @@ export default function ProductPageTemplate({ data: { shopifyProduct } }) {
             onClick={() => {
               addProductToCart(variantId);
             }}
-            className={`btn btn-dark btn-lg mb-3`}
+            className={`${glowOnHover} btn btn-dark btn-lg mb-3`}
           >
             Add to cart
           </button>

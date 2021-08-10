@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import { StoreContext } from "../context/store-context";
 import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -11,7 +12,6 @@ export const CartItem = ({ item }) => {
     ...item.variant.image,
     originalSrc: item.variant.image.src,
   };
-
   const image = React.useMemo(
     () =>
       getShopifyImage({
@@ -24,11 +24,11 @@ export const CartItem = ({ item }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [variantImage.src]
   );
-  console.log(item);
+
   return (
     <>
       <tr>
-        <Link>
+        <Link to={`/products/${item.collections[0]}/${item.title}}`}>
           <td>
             <GatsbyImage image={image} alt={item.variant.image.altText} />
           </td>
@@ -52,3 +52,17 @@ export const CartItem = ({ item }) => {
     </>
   );
 };
+
+export const query = graphql`
+  query ($variantID: String!) {
+    shopifyProduct(
+      variants: { elemMatch: { storefrontId: { eq: $variantID } } }
+    ) {
+      id
+      handle
+      collections {
+        handle
+      }
+    }
+  }
+`;
