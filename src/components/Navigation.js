@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import { RiHome7Fill, RiShoppingCartFill } from "react-icons/ri";
-import { wrapper, icon, left_item, right_item } from "./Navigation.module.scss";
+import { RiHome7Fill } from "react-icons/ri";
+import { CartButton } from "./CartButton";
+import { wrapper, left_item, right_item } from "./Navigation.module.scss";
 
 export const Navigation = () => {
   return (
@@ -10,7 +11,7 @@ export const Navigation = () => {
     >
       <div className={`${left_item} nav-item d-flex`}>
         <Link to="/" className={`nav-link d-flex align-items-center`}>
-          <RiHome7Fill className={`${icon} `} />
+          <RiHome7Fill />
         </Link>
         <ul className={`nav `}>
           <li className="nav-item ">
@@ -30,12 +31,8 @@ export const Navigation = () => {
           </li>
         </ul>
       </div>
-      <div
-        className={`${(right_item, icon)} nav-item d-flex justify-content-end`}
-      >
-        <Link to="/cart" className="nav-link">
-          <RiShoppingCartFill className={`${icon} `} />
-        </Link>
+      <div className={`${right_item} nav-item d-flex justify-content-end`}>
+        <CartButton />
       </div>
     </nav>
   );

@@ -2,14 +2,11 @@ import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Layout } from "../components/Layout";
-import { glowOnHover } from "../styles/glowOnHover.module.scss";
+import { AddToCart } from "./AddToCart";
 import { wrapper } from "./productPageTemplate.module.scss";
-import { StoreContext } from "../context/store-context";
 
 export default function ProductPageTemplate({ data: { shopifyProduct } }) {
   const image = getImage(shopifyProduct.images[0]);
-  const { addProductToCart } = React.useContext(StoreContext);
-  const variantId = shopifyProduct.variants[0].storefrontId;
 
   return (
     <Layout>
@@ -20,14 +17,7 @@ export default function ProductPageTemplate({ data: { shopifyProduct } }) {
         <div className={`align-self-center`}>
           <h1>{shopifyProduct.title}</h1>
           <p className={`display-1 `}>$10</p>
-          <button
-            onClick={() => {
-              addProductToCart(variantId);
-            }}
-            className={`${glowOnHover} btn btn-dark btn-lg mb-3`}
-          >
-            Add to cart
-          </button>
+          <AddToCart shopifyProduct={shopifyProduct} />
           <p className={`description `}>{shopifyProduct.description}</p>
         </div>
       </div>
