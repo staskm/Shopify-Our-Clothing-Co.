@@ -1,10 +1,16 @@
 import React from "react";
+import { StoreContext } from "../context/store-context";
 import { Link } from "gatsby";
 import { RiHome7Fill } from "react-icons/ri";
 import { CartButton } from "./CartButton";
+import { Toast } from "./Toast";
 import { wrapper, left_item, right_item } from "./Navigation.module.scss";
 
 export const Navigation = () => {
+  const { didJustAddToCart } = React.useContext(StoreContext);
+
+  console.log(didJustAddToCart);
+
   return (
     <nav
       className={`${wrapper} container-xl py-2 d-flex  justify-content-between`}
@@ -34,6 +40,8 @@ export const Navigation = () => {
       <div className={`${right_item} nav-item d-flex justify-content-end`}>
         <CartButton />
       </div>
+
+      <Toast show={didJustAddToCart} />
     </nav>
   );
 };
