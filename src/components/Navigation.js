@@ -9,17 +9,13 @@ import { wrapper, left_item, right_item } from "./Navigation.module.scss";
 export const Navigation = () => {
   const { didJustAddToCart } = React.useContext(StoreContext);
 
-  console.log(didJustAddToCart);
-
   return (
-    <nav
-      className={`${wrapper} container-xl py-2 d-flex  justify-content-between`}
-    >
-      <div className={`${left_item} nav-item d-flex`}>
-        <Link to="/" className={`nav-link d-flex align-items-center`}>
+    <nav className={`${wrapper} container-xl py-2 `}>
+      <div className={`${left_item} d-flex`}>
+        <Link to="/" className={`nav-link center`}>
           <RiHome7Fill />
         </Link>
-        <ul className={`nav `}>
+        <ul className={`nav`}>
           <li className="nav-item ">
             <Link to="/products/women" className="nav-link">
               Women
@@ -40,7 +36,6 @@ export const Navigation = () => {
       <div className={`${right_item} nav-item d-flex justify-content-end`}>
         <CartButton />
       </div>
-
       <Toast show={didJustAddToCart} />
     </nav>
   );

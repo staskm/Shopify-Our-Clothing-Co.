@@ -2,15 +2,19 @@
 
 .wrapper {
   height: 15vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
-.left_item {
-  grid-column: 1/2;
-}
+// .left_item {
+//   grid-column: 1/2;
+// }
 
-.right_item {
-  grid-column: 3/4;
-}
+// .right_item {
+//   grid-column: 3/4;
+// }

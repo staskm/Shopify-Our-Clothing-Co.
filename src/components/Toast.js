@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  toastWrapper,
-  hiding,
-  showing,
-  glowOnHover,
-} from "./Toast.module.scss";
+import { toastWrapper, hiding, showing } from "./Toast.module.scss";
 
 export function Toast({ show, duration = 1000 }) {
   const [visible, setVisible] = React.useState(show);

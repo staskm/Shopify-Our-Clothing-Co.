@@ -24,7 +24,6 @@ export const CartItem = ({ item }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [variantImage.src]
   );
-  console.log(item);
   return (
     <>
       {item && (
