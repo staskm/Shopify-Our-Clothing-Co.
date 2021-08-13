@@ -1,13 +1,17 @@
 @use "./custom" as *;
 @import "~bootstrap/scss/bootstrap";
 
+.active {
+  text-decoration: underline;
+}
+
 .nav-link {
   @media screen and (max-width: 768px) {
     font-size: $font-size-sm;
   }
 }
 .card-title {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   @media screen and (max-width: 768px) {
     font-size: 0.8rem;
   }

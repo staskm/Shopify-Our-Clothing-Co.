@@ -20,27 +20,39 @@ export const Navigation = () => {
           </Link>
           <ul className={`nav`}>
             <li className="nav-item center">
-              <Link to="/products/women" className="nav-link">
+              <Link
+                to="/products/women"
+                activeClassName="active"
+                className="nav-link"
+              >
                 Women
               </Link>
             </li>
             <li className="nav-item center">
-              <Link to="/products/men" className="nav-link">
+              <Link
+                to="/products/men"
+                activeClassName="active"
+                className="nav-link"
+              >
                 Men
               </Link>
             </li>
             <li className="nav-item center">
-              <Link to="/products/kid" className="nav-link">
+              <Link
+                to="/products/kid"
+                activeClassName="active"
+                className="nav-link"
+              >
                 Kids
               </Link>
             </li>
           </ul>
         </div>
         <div className={`nav-item center d-flex justify-content-end`}>
+          <Toast show={didJustAddToCart} />
           <CartButton />
         </div>
       </div>
-      <Toast show={didJustAddToCart} />
     </nav>
   );
 };
