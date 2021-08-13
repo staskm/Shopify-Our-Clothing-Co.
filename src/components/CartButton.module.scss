@@ -1,6 +1,7 @@
 @use "../styles/custom" as *;
 
 .wrapper {
+  position: relative;
   text-decoration: none;
   color: $body-color;
   font-size: $nav-link-font-size;
