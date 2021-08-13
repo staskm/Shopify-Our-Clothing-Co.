@@ -16,7 +16,7 @@ export const CartButton = () => {
   return (
     <Link to="/cart" className={`${wrapper} `}>
       <RiShoppingCartFill />
-      {quantity > 0 && <div className={`${badge} `}>{quantity}</div>}
+      {quantity > 0 && <div className={`${badge} center`}>{quantity}</div>}
     </Link>
   );
 };

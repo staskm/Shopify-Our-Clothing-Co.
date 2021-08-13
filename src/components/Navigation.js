@@ -10,8 +10,10 @@ export const Navigation = () => {
   const { didJustAddToCart } = React.useContext(StoreContext);
 
   return (
-    <nav className={`${wrapper} container-xl py-2 `}>
-      <div className={`w-100 h-100 d-flex justify-content-between `}>
+    <nav className={`${wrapper} sticky-top  py-2 `}>
+      <div
+        className={`w-100 h-100 container-xl d-flex justify-content-between `}
+      >
         <div className={`d-flex`}>
           <Link to="/" className={`nav-link center`}>
             <RiHome7Fill />
