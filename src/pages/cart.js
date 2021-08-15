@@ -28,18 +28,18 @@ export default function Cart() {
                 <th className={`${tableHeader} `}></th>
                 <th className={`${tableHeader} `}>Product</th>
                 <th className={`${tableHeader} `}>Price</th>
-                <td></td>
-                <td></td>
+                {/* <td></td> */}
+                {/* <td></td> */}
               </tr>
               {checkout.lineItems.map((item) => {
                 return <CartItem key={item.id} item={item} />;
               })}
               <tr>
                 <td></td>
-                <td></td>
-                <td></td>
                 <td>subtotal</td>
                 <td>{checkout.totalPrice}</td>
+                {/* <td></td> */}
+                {/* <td></td> */}
               </tr>
             </tbody>
           </table>

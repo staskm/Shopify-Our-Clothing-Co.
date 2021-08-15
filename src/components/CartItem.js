@@ -33,14 +33,13 @@ export const CartItem = ({ item }) => {
           </td>
           <td>{item.title}</td>
           <td>
-            <p className={`center`}>
+            <p>
               {item.variant.price}
               <IoRemoveCircleSharp
                 role="button"
                 onClick={() => {
                   removeLineItem(checkout.id, item.id);
                 }}
-                className={`center`}
               />
             </p>
           </td>
