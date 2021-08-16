@@ -1,8 +1,11 @@
 require("dotenv").config();
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "our-clothing-co-gatsby",
+    siteUrl: "https://wonderful-bohr-522582.netlify.app",
+    sitTitleDefault: "Our Clothing Co.",
+    hrefLang: "en",
+    siteDescription:
+      "Ecommerce demo using Gatsby, Shopify, SCSS, and Bootstrap.",
   },
   plugins: [
     {
@@ -15,6 +18,7 @@ module.exports = {
     },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
