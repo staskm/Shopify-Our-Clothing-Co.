@@ -1,8 +1,8 @@
 require("dotenv").config();
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://wonderful-bohr-522582.netlify.app",
-    sitTitleDefault: "Our Clothing Co.",
+    siteUrl: "https://ourclothingco.netlify.app/",
+    siteTitleDefault: "Our Clothing Co.",
     hrefLang: "en",
     siteDescription:
       "Ecommerce demo using Gatsby, Shopify, SCSS, and Bootstrap.",

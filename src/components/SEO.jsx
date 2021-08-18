@@ -19,18 +19,19 @@ export function SEO({
           hrefLang
           siteUrl
           siteDescription
-          steTitleDefault
+          siteTitleDefault
         }
       }
     }
   `);
 
-  const { hrefLang, siteDescription, siteUrl, title } = siteMetadata;
+  const { hrefLang, siteDescription, siteUrl, title, siteTitleDefault } =
+    siteMetadata;
 
   const seo = {
-    title: title,
+    title: siteTitleDefault,
     description: siteDescription,
-    url: pathname ? `${siteUrl}${pathname}` : location.href,
+    url: siteUrl,
   };
 
   return (
