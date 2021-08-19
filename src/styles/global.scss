@@ -1,6 +1,13 @@
 @use "./custom" as *;
 @import "~bootstrap/scss/bootstrap";
 
+// h1,
+// h2,
+// h3 {
+//   // font-family: $custom-heading-font;
+//   font-family: "Raleway", sans-serif;
+// }
+
 .active {
   text-decoration: underline;
 }
