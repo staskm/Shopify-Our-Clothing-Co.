@@ -3,14 +3,17 @@
 .headerImage {
   background-image: url("../images/greenshirts-large.jpg");
   background-position: center;
-  height: 80vh;
+  // margin-top: 3vh;
+  height: 30vh;
+  margin: auto auto 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .headerText {
-  width: 80%;
+  font-family: $headings-font-family;
+  width: 100%;
   color: white;
   background-color: #dbb3b1;
   display: flex;

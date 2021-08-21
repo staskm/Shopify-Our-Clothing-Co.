@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-
 import { Layout } from "../components/Layout";
+import { Header } from "../components/Header";
 import { ProductList } from "../components/ProductList";
 
 export default function ProductCollectionIndex({
@@ -9,9 +9,7 @@ export default function ProductCollectionIndex({
 }) {
   return (
     <Layout>
-      <h2 className={`display-2 text-center mt-5 mb-4`}>
-        {shopifyCollection.title}
-      </h2>
+      <Header text={shopifyCollection.title} />
       <ProductList products={shopifyCollection.products} />
     </Layout>
   );

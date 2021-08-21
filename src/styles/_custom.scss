@@ -2,8 +2,6 @@
 
 // * some component-level variables are declared in _custom.scss so that bootstrap will integrate them properly
 
-// $custom-heading-font: "Raleway", sans-serif;
-
 // Font
 $headings-font-family: "Raleway", sans-serif;
 
@@ -24,8 +22,6 @@ $nav-link-font-weight: $font-weight-bold;
 // Colors
 $body-color: #02111b;
 $link-color: $body-color;
-
-// $heading-font-family: $custom-heading-font;
 $danger: #dbb3b1;
 $primary: #e8fae3;
-$link-hover-color: $primary;
+// $link-hover-color: $primary;

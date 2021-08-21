@@ -10,39 +10,27 @@ export const Navigation = () => {
   const { didJustAddToCart } = React.useContext(StoreContext);
 
   return (
-    <nav className={`${wrapper} sticky-top  py-2 `}>
+    <nav className={`${wrapper} sticky-top py-2 `}>
       <div
         className={`w-100 h-100 container-xl d-flex justify-content-between `}
       >
         <div className={`d-flex`}>
-          <Link to="/" className={`nav-link center`}>
+          <Link to="/" className={`nav-item center`}>
             <RiHome7Fill />
           </Link>
           <ul className={`nav`}>
             <li className="nav-item center">
-              <Link
-                to="/products/women"
-                activeClassName="active"
-                className="nav-link"
-              >
+              <Link to="/products/women" className="nav-link">
                 Women
               </Link>
             </li>
             <li className="nav-item center">
-              <Link
-                to="/products/men"
-                activeClassName="active"
-                className="nav-link"
-              >
+              <Link to="/products/men" className="nav-link">
                 Men
               </Link>
             </li>
             <li className="nav-item center">
-              <Link
-                to="/products/kid"
-                activeClassName="active"
-                className="nav-link"
-              >
+              <Link to="/products/kid" className="nav-link">
                 Kids
               </Link>
             </li>

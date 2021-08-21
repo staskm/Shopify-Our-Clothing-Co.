@@ -9,9 +9,8 @@ import "../styles/global.scss";
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <Header />
+      <Header text="Featured" />
       <main>
-        <h2 className={`display-2 text-center`}>Best Sellers</h2>
         <ProductList products={data.allShopifyProduct.products} />
       </main>
     </Layout>
