@@ -15,13 +15,22 @@ export default function Cart() {
     window.open(checkout.webUrl);
   };
 
+  console.log(checkout.lineItems);
   return (
     <Layout>
-      <h1>Cart</h1>
-      {!checkout.lineItems ? (
-        <p>cart is empty</p>
+      {!checkout.lineItems.length ? (
+        <div className="fs-1">
+          {/* <h1 className="center">Cart</h1> */}
+          <div>
+            <span role="img" aria-label="cart-icon" className="center">
+              🛒💨
+            </span>
+          </div>
+          <p className="center">Your cart is empty</p>
+        </div>
       ) : (
         <>
+          <h1>Cart</h1>
           <table className={`${cartTable} `}>
             <tbody>
               <tr>
@@ -36,7 +45,7 @@ export default function Cart() {
               })}
               <tr>
                 <td></td>
-                <td>subtotal</td>
+                <td>Subtotal</td>
                 <td>{checkout.totalPrice}</td>
                 {/* <td></td> */}
                 {/* <td></td> */}
