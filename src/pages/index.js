@@ -17,9 +17,11 @@ const IndexPage = ({ data }) => {
   );
 };
 
+// (filter: { tags: { eq: "bestseller" } })
+
 export const query = graphql`
   query {
-    allShopifyProduct(filter: { tags: { eq: "bestseller" } }) {
+    allShopifyProduct {
       products: nodes {
         id
         title
