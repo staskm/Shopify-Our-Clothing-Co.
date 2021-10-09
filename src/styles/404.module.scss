@@ -1,0 +1,14 @@
+@use "../styles/custom" as *;
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFoundImage {
+  max-width: 200px;
+}
